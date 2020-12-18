@@ -1,20 +1,26 @@
-### Build Docker Image:
+# STEPS TO TEST
+
+### Build Docker Image
+
 docker build -t test .
 
-### Remove test container is already running:
+### Remove test container is already running
+
 docker rm -f test
 
-### Start the container and expose port 5000 (for app) and 2222 for SSH:
+### Start the container and expose port 5000 (for app) and 2222 for SSH
+
 docker run -d -p 5000:5000 -p 2222:2222 --name test test
 
 ### Check logs to ensure that the app is running
+
 docker logs test -f
 [Press Ctrl + C to end]
 
-### Test SSH:
+### Test SSH
 
-ssh root@localhost -p 2222 
-root@localhost's password: 
+ssh root@localhost -p 2222  
+root@localhost's password:  
 (password in Docker!)
 The programs included with the Debian GNU/Linux system are free software;
 the exact distribution terms for each program are described in the
@@ -24,4 +30,4 @@ Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
 root@50d8781b118b:/usr/src/app#
 
-### THIS IS A SAMPLE AND IS NOT MAINTAINED.
+### THIS IS A SAMPLE AND IS NOT MAINTAINED
