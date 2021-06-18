@@ -4,7 +4,7 @@
 
 docker build -t test .
 
-### Remove test container is already running
+### Remove test container if already running
 
 docker rm -f test
 
